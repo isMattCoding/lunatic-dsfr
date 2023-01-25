@@ -27,16 +27,12 @@
 # Install / Import
 
 ```bash
-$ npm install --save lunatic-dsfr
+$ yarn add lunatic-dsfr @codegouvfr/react-dsfr
 ```
 
-```typescript
-import { myFunction, myObject } from "lunatic-dsfr";
-```
-
-Specific imports:
+You must follow the setup instruction from [react-dsfr](https://react-dsfr.etalab.studio/).
 
 ```typescript
-import { myFunction } from "lunatic-dsfr/myFunction";
-import { myObject } from "lunatic-dsfr/myObject";
+import { MyComponent } from "lunatic-dsfr";
+import { MyComponent } from "lunatic-dsfr/MyComponent";
 ```
