@@ -56,7 +56,7 @@ git clone https://github.com/isMattCoding/lunatic-dsfr
 cd lunatic-dsfr
 yarn
 yarn build
-ts-node --skipProject src/scripts/link-in-main-project.ts test-lunatic-dsfr
+npx ts-node --skipProject src/scripts/link-in-main-project.ts test-lunatic-dsfr
 npx tsc -w
 
 # Open another terminal
