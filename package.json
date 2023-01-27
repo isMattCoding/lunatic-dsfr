@@ -15,7 +15,8 @@
         "lint": "npm run lint:check -- --fix",
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
-        "format:check": "npm run _format -- --list-different"
+        "format:check": "npm run _format -- --list-different",
+        "link-in-main-project": "ts-node --skipProject src/scripts/link-in-main-project.ts test-lunatic-dsfr"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -34,16 +35,16 @@
     "license": "MIT",
     "files": [
         "src/",
-        "!src/test/",
+        "!src/scripts/",
         "dist/",
-        "!dist/test/",
         "!dist/tsconfig.tsbuildinfo"
     ],
     "keywords": [],
     "homepage": "https://github.com/isMattCoding/lunatic-dsfr",
     "peerDependencies": {
         "@codegouvfr/react-dsfr": "^0.27.2",
-        "react": "*"
+        "react": "*",
+        "@emotion/react": "^11.10.5"
     },
     "devDependencies": {
         "@codegouvfr/react-dsfr": "^0.27.2",
@@ -57,6 +58,8 @@
         "lint-staged": "^11.1.1",
         "prettier": "^2.3.2",
         "react": "^18.2.0",
-        "typescript": "^4.3.5"
+        "ts-node": "^10.9.1",
+        "typescript": "^4.3.5",
+        "@emotion/react": "^11.10.5"
     }
 }

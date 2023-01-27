@@ -36,3 +36,31 @@ You must follow the setup instruction from [react-dsfr](https://react-dsfr.etala
 import { MyComponent } from "lunatic-dsfr";
 import { MyComponent } from "lunatic-dsfr/MyComponent";
 ```
+
+# Setup dev environnement
+
+```bash
+yarn
+```
+
+# Link this module in main project
+
+```bash
+cd ~/github
+git clone https://github.com/garronej/test-lunatic-dsfr
+cd test-lunatic-dsfr
+yarn
+
+cd ~/github
+git clone https://github.com/isMattCoding/lunatic-dsfr
+cd lunatic-dsfr
+yarn
+yarn build
+ts-node --skipProject src/scripts/link-in-main-project.ts test-lunatic-dsfr
+npx tsc -w
+
+# Open another terminal
+
+cd ~/github/test-lunatic-dsfr
+yarn start
+```
