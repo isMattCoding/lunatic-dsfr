@@ -16,7 +16,12 @@
         "_format": "prettier '**/*.{ts,tsx,json,md}'",
         "format": "npm run _format -- --write",
         "format:check": "npm run _format -- --list-different",
-        "link-in-main-project": "ts-node --skipProject src/scripts/link-in-main-project.ts"
+        "link-in-main-project": "ts-node --skipProject src/scripts/link-in-main-project.ts",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook",
+        "postinstall": "copy-dsfr-to-public",
+        "prestart": "only-include-used-icons",
+        "prebuild": "only-include-used-icons"
     },
     "lint-staged": {
         "*.{ts,tsx}": [
@@ -47,23 +52,38 @@
         "react": "*"
     },
     "devDependencies": {
+        "@babel/core": "^7.20.12",
         "@codegouvfr/react-dsfr": "^0.27.2",
         "@emotion/react": "^11.10.5",
+        "@storybook/addon-actions": "^6.5.16",
+        "@storybook/addon-essentials": "^6.5.16",
+        "@storybook/addon-interactions": "^6.5.16",
+        "@storybook/addon-links": "^6.5.16",
+        "@storybook/builder-webpack5": "^6.5.15",
+        "@storybook/manager-webpack5": "^6.5.15",
+        "@storybook/react": "^6.5.16",
+        "@storybook/testing-library": "^0.0.13",
         "@types/node": "^16.4.9",
         "@types/react": "^18.0.27",
+        "@types/react-dom": "^18.0.10",
         "@typescript-eslint/eslint-plugin": "^4.28.5",
         "@typescript-eslint/parser": "^4.28.5",
+        "babel-loader": "^8.3.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-storybook": "^0.6.10",
         "husky": "^4.3.8",
         "lint-staged": "^11.1.1",
         "prettier": "^2.3.2",
         "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "ts-node": "^10.9.1",
+        "tsconfig-paths-webpack-plugin": "^4.0.0",
         "typescript": "^4.3.5"
     },
     "dependencies": {
         "@inseefr/lunatic": "^0.3.4-experimental",
-        "classnames": "^2.3.2"
+        "classnames": "^2.3.2",
+        "sass-loader": "^13.2.0"
     }
 }
