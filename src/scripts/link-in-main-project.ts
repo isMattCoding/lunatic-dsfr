@@ -29,7 +29,7 @@ fs.writeFileSync(
 
 const commonThirdPartyDeps = (() => {
     const namespaceModuleNames = ["@emotion"];
-    const standaloneModuleNames = ["react", "@types/react"];
+    const standaloneModuleNames = ["react", "@types/react", "@codegouvfr/react-dsfr" ];
 
     return [
         ...namespaceModuleNames
